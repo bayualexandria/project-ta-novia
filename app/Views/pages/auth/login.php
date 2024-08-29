@@ -4,7 +4,10 @@
 <div class="w-1/4 flex flex-col justify-center items-center gap-y-5">
     <h1 class="font-bold text-xl text-white">Halaman Login</h1>
     <div class="w-full rounded-md shadow-md px-6 py-10 bg-white">
-        <form action="" method="POST" class="flex flex-col gap-y-3">
+        <div class="flex flex-col justify-center items-center pb-3">
+            <img class="w-1/4 justify-center items-center" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyNFHkswUCV739qiEtbpDu6OpXJHo0AwN0cfx9pYB4-zmDInsXXurdmV1otkEJYlGVAv4&usqp=CAU" alt="" srcset="">
+        </div>
+        <form action="<?= base_url('/login'); ?>" method="POST" class="flex flex-col gap-y-3">
             <div class="flex flex-col gap-y-2">
                 <label for="username">Username</label>
                 <input type="text" name="username" id="username" class="rounded-md border w-full border-slate-500 py-1 px-2 outline-none">

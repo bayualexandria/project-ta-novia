@@ -1,84 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <title><?= lang('Errors.pageNotFound') ?></title>
+    <link rel="stylesheet" href="<?= base_url('assets/css/styles.css'); ?>">
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyNFHkswUCV739qiEtbpDu6OpXJHo0AwN0cfx9pYB4-zmDInsXXurdmV1otkEJYlGVAv4&usqp=CAU">
 
-    <style>
-        div.logo {
-            height: 200px;
-            width: 155px;
-            display: inline-block;
-            opacity: 0.08;
-            position: absolute;
-            top: 2rem;
-            left: 50%;
-            margin-left: -73px;
-        }
-        body {
-            height: 100%;
-            background: #fafafa;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            color: #777;
-            font-weight: 300;
-        }
-        h1 {
-            font-weight: lighter;
-            letter-spacing: normal;
-            font-size: 3rem;
-            margin-top: 0;
-            margin-bottom: 0;
-            color: #222;
-        }
-        .wrap {
-            max-width: 1024px;
-            margin: 5rem auto;
-            padding: 2rem;
-            background: #fff;
-            text-align: center;
-            border: 1px solid #efefef;
-            border-radius: 0.5rem;
-            position: relative;
-        }
-        pre {
-            white-space: normal;
-            margin-top: 1.5rem;
-        }
-        code {
-            background: #fafafa;
-            border: 1px solid #efefef;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            display: block;
-        }
-        p {
-            margin-top: 1.5rem;
-        }
-        .footer {
-            margin-top: 2rem;
-            border-top: 1px solid #efefef;
-            padding: 1em 2em 0 2em;
-            font-size: 85%;
-            color: #999;
-        }
-        a:active,
-        a:link,
-        a:visited {
-            color: #dd4814;
-        }
-    </style>
 </head>
-<body>
-    <div class="wrap">
-        <h1>404</h1>
 
-        <p>
+<body>
+    <div class="flex flex-col w-full h-screen bg-slate-900 justify-center items-center gap-y-10">
+        <h1 class="text-9xl font-bold text-white">404</h1>
+
+        <p class="text-white font-normal">
             <?php if (ENVIRONMENT !== 'production') : ?>
                 <?= nl2br(esc($message)) ?>
             <?php else : ?>
                 <?= lang('Errors.sorryCannotFind') ?>
             <?php endif; ?>
         </p>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8 text-white">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 0 0 5.636 5.636m12.728 12.728A9 9 0 0 1 5.636 5.636m12.728 12.728L5.636 5.636" />
+        </svg>
+
     </div>
 </body>
+
 </html>
