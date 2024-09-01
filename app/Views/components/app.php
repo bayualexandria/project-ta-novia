@@ -12,11 +12,18 @@
 
 <body>
     <div class="flex w-full h-screen bg-slate-900 flex-col justify-center items-center">
-
-        <?= $this->renderSection('content'); ?>
+        <div class="flex flex-row w-full h-screen">
+            <?= $this->include('components/sidebar'); ?>
+            <div class="w-5/6 bg-white">
+                <?= $this->include('components/header'); ?>
+                <?= $this->renderSection('content'); ?>
+            </div>
+        </div>
     </div>
 
     <?= $this->renderSection('scripts'); ?>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 
